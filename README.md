@@ -41,16 +41,3 @@ sudo chown -R esp32cam:esp32cam /home/esp32cam/photos
 sudo systemctl restart vsftpd
 ```
 
-Using Nerfstudio
-```sh
-#install
-curl -fsSL https://pixi.sh/install.sh | bash
-
-git clone https://github.com/nerfstudio-project/nerfstudio.git
-cd nerfstudio
-pixi run post-install
-pixi shell
-
-ns-process-data images --date /home/user/data --output-dir /home/user/output
-ns-train nerfacto --data /home/user/output
-```
